@@ -27,4 +27,4 @@ Book name: The Selfish Gene
 Author: Richard Dawkins
 Department: Biology
 Pages: 438
-Edition: 7
+Edition: 6
