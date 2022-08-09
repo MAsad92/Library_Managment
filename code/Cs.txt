@@ -1,0 +1,30 @@
+
+Book name: Clean Code
+Author: Robert Cecil
+Department: Computer Sci
+Pages: 490
+Edition: 2
+
+Book name: Code Complete
+Author: Steve McConnell
+Department: Computer Sci
+Pages: 310
+Edition: 2
+
+Book name: Computer Scientist
+Author: Cory Althoff
+Department: Computer Sci
+Pages: 390
+Edition: 2
+
+Book name: Algorithms
+Author: Robert Sedgewick
+Department: Computer Sci
+Pages: 410
+Edition: 5
+
+Book name: Life 3.0
+Author: Max Tegmark
+Department: Computer Sci
+Pages:510
+Edition: 2
