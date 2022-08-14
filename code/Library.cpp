@@ -107,6 +107,7 @@ class library
 		void menu_student()								        //menu student
 		{
 			cout<<"\t\t-------------------------------        Library        -------------------------------\n\n";
+			cout<<"\t\t------------------          You Entered in Student Section         -------------------\n\n";
 			cout<<"\t\t1-> Booklist\n"<<"\t\t2-> Search for Book\n"<<"\t\t3-> Main Menu\n"<<"\t\t4-> Exit\n\n";
 			cout<<"\n\t\tSelect form above: ";
 			cin>>select;
@@ -136,6 +137,7 @@ class library
 		void menu_librarian()							       //menu librarian
 		{
 			cout<<"\t\t-------------------------------        Library        -------------------------------\n\n";
+			cout<<"\t\t------------------          You Entered in Librarian Section         -------------------\n\n";
 			cout<<"\t\t1-> Booklist\n"<<"\t\t2-> Search for Book\n"<<"\t\t3-> Modify/Add Books\n"<<"\t\t4-> Main Menu\n"<<"\t\t5-> Exit\n\n";
 			cout<<"\n\t\tSelect form above: ";
 			cin>>select;
@@ -313,7 +315,8 @@ class library
 			cout<<"\t\t-------------------------------        Library        -------------------------------\n\n";
 			cout<<"\n\t\tEnter detail's of Book you want to add: ";
 			cout<<"\n\n\t\tEnter Book name: ";
-			cin.getline(title,10);
+			cin.ignore();
+			cin.getline(title,20);
 			cout<<"\n\t\tEnter Author name: ";
 			cin.getline(author,20);
 			cout<<"\n\t\tDepartment name: ";
@@ -513,28 +516,32 @@ class library
 		cout<<"\t\t-------------------------------        Library        -------------------------------\n\n";
 		cout<<"\n\t\t1-> Language\n"<<"\t\t2-> Computer Science\n"<<"\t\t3-> Law\n"<<"\t\t4-> Mathamethics\n"<<"\t\t5-> Biological\n";
 		cout<<"\n\t\tSelect a Subject to search book: \n\n";
+		string book_search;
 		cin>>search;
+		cout<<"Enter book name: ";
+		cin.ignore();
+		getline(cin,book_search);
 		switch(search)
 		{
 			case 1:
 				language.dis_books();
-				language.find_book("Language Instinct");
+				language.find_book(book_search);
 				break;
 			case 2:
 				cs.dis_books();
-				cs.find_book("Language Instinct");
+				cs.find_book(book_search);
 				break;
 			case 3:
 				law.dis_books();
-				law.find_book("Language Instinct");
+				law.find_book(book_search);
 				break;
 			case 4:
 				math.dis_books();
-				math.find_book("Language Instinct");
+				math.find_book(book_search);
 				break;
 			case 5:
 				bio.dis_books();
-				bio.find_book("Language Instinct");
+				bio.find_book(book_search);
 				break;												
 		}
 	}
