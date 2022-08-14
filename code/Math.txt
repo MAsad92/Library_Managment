@@ -1,0 +1,6 @@
+Thomas Calculus,George B.Thomas,Mathamethics,499,14
+How to Solve It,George Pclya,Mathamethics,387,2,
+The Joy of X,Steven Strogatz,Mathamethics,714,5,
+Math games,Ben Orlin,Mathamethics,315,1,
+A History of Pi,Petr Beckmann,Mathamethics,369,2,
+Zero,Charles Seife,Mathamethics,210,7,

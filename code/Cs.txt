@@ -1,0 +1,5 @@
+Clean Code,Robert Cecil,Computer Science,490,2,
+Code Complete,Steve McConnell,Computer Science,310,2,
+Computer Scientist,Cory Althoff,Computer Science,390,2,
+Algorithms,Robert Sedgewick,Computer Science,410,5,
+Life 3.0,Max Tegmark,Computer Science,510,2,

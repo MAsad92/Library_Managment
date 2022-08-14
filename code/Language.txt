@@ -1,0 +1,5 @@
+Language Instinct,Steven Pinker,Linguistics,483,1,
+The Etymologicon,Mark Forsyth,Linguistics,304,5,
+Linguistics and Law,Jeffrey.P.Kaplan,Linguistics,236,1,
+Language Hoax,John McWhorter,Linguistics,182,6,
+On language,Noam Chomsky,Linguistics,4,

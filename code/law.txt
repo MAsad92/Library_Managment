@@ -1,0 +1,5 @@
+Legal Analyst,Ward Farnsworth,Law,339,4,
+The Civil Action,Jonathan Harr,Law,419,5,
+The Color of Law,Richard Rothstein,Law,298,1,
+Learning the Law,Glanville Williams,Law,510,5,
+Constitutional Law,Erwin Chemerinsky,Law,619,10,
