@@ -1,2 +1,2 @@
-Ali 234
-Omer 222
+Ali Rehman Ali 123
+Ubaid Rehman Ubaid 555
