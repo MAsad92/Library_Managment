@@ -42,7 +42,11 @@ class library
 				case 3:
 					break;	
 				default:
-					cout<<"\n\t\tInvalid Input!\n";		
+					cout<<"\n\t\tInvalid Input!\n";
+					system("pause");
+					system("cls");
+					display();	
+					break;	
 			}
 		}
 		
@@ -69,8 +73,13 @@ class library
 					display();
 					break;	
         		case 4:
-            		system("cls");
-            		cout<<"\n\t\tInvalid Input!\n"<<endl;
+            		break;
+            	default:	
+            		cout<<"\n\t\tInvalid Input!\n";
+					system("pause");
+					system("cls");
+					display();	
+					break;	
     		}
 		}
 		
@@ -80,7 +89,7 @@ class library
 		{
 			cout<<"\t\t-------------------------------        Library        -------------------------------\n\n";
 			cout<<"\t\t------------------          You Entered in Librarian Section         -------------------\n\n";
-    		cout<<"\t\t1-> Log In\n"<<"\t\t2-> Sign Up\n"<<"\t\t3-> Menu\n"<<"\t\t3-> Exit"<<endl;
+    		cout<<"\t\t1-> Log In\n"<<"\t\t2-> Sign Up\n"<<"\t\t3-> Menu\n"<<"\t\t4-> Exit"<<endl;
     		cout<<"\n\n\t\tEnter your choice : ";
     		cin>>choice_lib;
     		cout<<endl;
@@ -94,11 +103,16 @@ class library
             		break;
             	case 3:
             		system("cls");
+            		display();
             		break;
+				case 4:
+					break;	
+            	default:	
+            		cout<<"\n\t\tInvalid Input!\n";
+					system("pause");
+					system("cls");
 					display();	
-        		case 4:
-            		system("cls");
-            		cout<<"\n\t\tInvalid Input!\n"<<endl;
+					break;	
     		}
 		}
 		
@@ -124,11 +138,13 @@ class library
 					this->display();
 					break;
 				case 4:
-					system("cls");
 					break;
 				default:
-					cout<<"\n\t\tInvalid Input!!\n";				
-					
+					cout<<"\n\t\tInvalid Input!\n";
+					system("pause");
+					system("cls");
+					display();	
+					break;					
 			}
 		}	
 		
@@ -138,7 +154,7 @@ class library
 		{
 			cout<<"\t\t-------------------------------        Library        -------------------------------\n\n";
 			cout<<"\t\t------------------          You Entered in Librarian Section         -------------------\n\n";
-			cout<<"\t\t1-> Booklist\n"<<"\t\t2-> Search for Book\n"<<"\t\t3-> Modify/Add Books\n"<<"\t\t4-> Main Menu\n"<<"\t\t5-> Exit\n\n";
+			cout<<"\t\t1-> Booklist\n"<<"\t\t2-> Search for Book\n"<<"\t\t3-> Modify/Add Books\n"<<"\t\t4-> Issue Book\n"<<"\t\t5-> Main Menu\n"<<"\t\t6-> Exit\n\n";
 			cout<<"\n\t\tSelect form above: ";
 			cin>>select;
 			system("cls");
@@ -154,13 +170,19 @@ class library
 					this->add_books(); 
 					break;	
 				case 4:
-					this->display();
+					this->issue_menu();
 					break;
 				case 5:
-					system("cls");
+					this->display();
 					break;
+				case 6:
+					break;	
 				default:
-					cout<<"\n\t\tInvalid Input!!\n";				
+					cout<<"\n\t\tInvalid Input!\n";
+					system("pause");
+					system("cls");
+					display();	
+					break;				
 					
 			}
 		}
@@ -174,9 +196,9 @@ class library
 		    system("cls");
 		    cout<<"\t\t-------------------------------        Library        -------------------------------\n\n";
 		    cout<<"\t\t--------------------          Login in Student Section         --------------------\n\n";
-		    cout<<"\n\t\tEnter your Username :";
+		    cout<<"\n\t\tEnter your Username: ";
 		    cin>>user;
-		    cout<<"\n\t\tEnter your Password :";
+		    cout<<"\n\t\tEnter your Password: ";
 		    cin>>pass;
 		    ifstream input("student.txt");
 		    while(input>>u>>p)
@@ -206,17 +228,21 @@ class library
 		void registeration()				        	     // Signup for student
 		{
 			int option;
-		    string reguser,regpass,ru,rp;
+		    string fname,reguser,regid,regpass;
 		    system("cls");
 		    cout<<"\t\t-------------------------------         Library        -------------------------------\n\n";
 		    cout<<"\t\t------------------------       Signup in Student Section      -----------------------\n\n";
-			cout<<"\n\t\tEnter your Name or Username :";
-		    cin>>reguser;
-		    cout<<"\n\t\tEnter the Password :";
-		    cin>>regpass;
-		    
+			cout<<"\n\t\tEnter your full Name: ";
+			cin.ignore();
+		    getline(cin,fname);
+		    cout<<"\n\t\tEnter the Username: ";
+		    getline(cin,reguser);
+		    cout<<"\n\t\tEnter the Password: ";
+		    getline(cin,regid);
+		    cout<<"\n\t\tEnter your Student Id: ";
+		    getline(cin,regpass);
 		    ofstream reg("student.txt",ios::app);
-		    reg<<reguser<<' '<<regpass<<endl;
+		    reg<<fname<<' '<<reguser<<' '<<regid<<' '<<regpass<<endl;
 		    system("cls");
 		    cout<<"\n\n\t\tRegistration Sucessful\n";
 		    cout<<"\n\t\t1-> Menu\n"<<"\t\t2-> Exit\n";
@@ -232,7 +258,11 @@ class library
 					system("cls");
 					break;
 				default:
-					break;		
+					cout<<"\n\t\tInvalid Input!\n";
+					system("pause");
+					system("cls");
+					display();	
+					break;			
 			}
 		}
 	
@@ -245,9 +275,9 @@ class library
 		    system("cls");
 		    cout<<"\t\t-------------------------------        Library        -------------------------------\n\n";
 		    cout<<"\t\t------------------------       Login in Librarian Section      -----------------------\n\n";
-		    cout<<"\n\t\tEnter your Username :";
+		    cout<<"\n\t\tEnter your Username: ";
 		    cin>>lib_user;
-		    cout<<"\n\t\tEnter your Password :";
+		    cout<<"\n\t\tEnter your Password: ";
 		    cin>>lib_pass;
 		    ifstream input("librarian.txt");
 		    while(input>>lib_u>>lib_p)
@@ -277,37 +307,134 @@ class library
 		void registeration_lib()	                        // Signup for Librarian
 		{
 			int option_1;
-		    string reg_user,reg_pass,r_u,r_p;
+		    string reg_fname,reg_user,reg_pass,r_u,r_p;
 		    system("cls");
 		    cout<<"\t\t-------------------------------         Library        -------------------------------\n\n";
 		    cout<<"\t\t------------------------       Signup in Librarian Section      -----------------------\n\n";
-			cout<<"\n\t\tEnter your Name or Username :";
-		    cin>>reg_user;
-		    cout<<"\n\t\tEnter the Password :";
-		    cin>>reg_pass;
+			cout<<"\n\t\tEnter your complete Name: ";
+			cin.ignore();
+		    getline(cin,reg_fname);
+		    cout<<"\n\t\tEnter your user Name: ";
+		    getline(cin,reg_user);
+		    cout<<"\n\t\tEnter the Password: ";
+		    getline(cin,reg_pass);
 		    ofstream add("librarian.txt",ios::app);
-		    add<<reg_user<<' '<<reg_pass<<endl;
+		    add<<reg_fname<<' '<<reg_user<<' '<<reg_pass<<endl;
 		    system("cls");
 		    cout<<"\n\n\t\tRegistration Sucessful\n";
 		    system("cls");
 		    cout<<"\n\n\t\tRegistration Sucessful\n";
-		    cout<<"\n\t\t1-> Menu0\n"<<"\t\t2-> Exit\n";
+		    cout<<"\n\t\t1-> Menu\n"<<"\t\t2-> Exit\n";
 		    cout<<"\t\tChoose an option: ";
 		    cin>>option_1;
 		    system("cls");
 		    switch(option_1)
 		    {
 		    	case 1:
-		    		display1();
+		    		display2();
 		    		break;
 		    	case 2:
-					system("cls");
 					break;
 				default:
+					cout<<"\n\t\tInvalid Input!\n";
+					system("pause");
+					system("cls");
+					display();	
 					break;		
 			}
 		}
 		
+//-------------------------------------------------------------------------------------------------------------------------------------------		
+		void issue_menu() 								 // To issue books
+		{
+			int menu_choose;
+			cout<<"\t\t-------------------------------        Library        -------------------------------\n\n";
+			cout<<"\t\t1-> Issue book\n"<<"\t\t2-> Information of Issued books\n"<<"\t\t3-> Menu\n"<<"\t\t4-> Exit\n";
+			cout<<"\n\t\tSelect form above: ";
+			cin>>menu_choose;
+			system("cls");
+			switch(menu_choose)
+			{
+				case 1:
+					issue_books();
+					break;
+				case 2:
+					issue_info();
+					break;
+				case 3:
+					display();
+					break;
+				case 4:
+					break;
+				default:
+					cout<<"\n\t\tInvalid Input!\n";
+					system("pause");
+					system("cls");
+					display();	
+					break;			
+					
+			}
+		}
+		void issue_books()                           
+		{
+			int issue;
+			cout<<"\t\t-------------------------------        Library        -------------------------------\n\n";
+			cout<<"\t\t1-> Language\n"<<"\t\t2-> Computer Science\n"<<"\t\t3-> Law\n"<<"\t\t4-> Mathamethics\n"<<"\t\t5-> Biological\n";
+			cout<<"\n\t\tSelect from above: ";
+			cin>>issue;
+			system("cls");
+			switch(issue)
+			{
+				case 1:
+					issue_dis();
+					break;
+				case 2:
+					issue_dis();
+					break;
+				case 3:
+					issue_dis();
+					break;
+				case 4:
+					issue_dis();
+					break;
+				case 5:
+					issue_dis();
+					break;
+				default:
+					cout<<"\n\t\tInvalid Input!\n";
+					system("pause");
+					system("cls");
+					display();	
+					break;						
+			}
+		}
+		void issue_dis()
+		{
+			cout<<"\t\t-------------------------------        Library        -------------------------------\n\n";
+			string issue_book,issue_fullname,issue_id;
+			cout<<"\t\tEnter Book Name: ";
+			cin.ignore();
+			getline(cin,issue_book);
+			cout<<"\n\t\tEnter Student Name: ";
+			getline(cin,issue_fullname);
+			cout<<"\n\t\tEnter Student Id: ";
+			getline(cin,issue_id);
+			ofstream issue("issue.txt",ios::app);
+			issue<<"Book name is: "<<issue_book<<' '<<"\nStudent name is: "<<issue_fullname<<"\nStudent Id is: "<<issue_id<<endl;
+			cout<<"\n\t\tBook issued!\n";
+			system("pause");
+			system("cls");
+			display();		
+		}
+		void issue_info()
+		{
+			string data;
+			  ifstream text("issue.txt");
+			  while (getline (text, data)) {
+			    cout<<data<<endl;
+			  }
+			  text.close();
+		}
 //-------------------------------------------------------------------------------------------------------------------------------------------
                                                       
 		void add_books()                              //  To enter new books in files
@@ -343,7 +470,13 @@ class library
 				case 4:
 					this->file_math();
 				case 5:
-					this->file_bio();		
+					this->file_bio();
+				default:
+					cout<<"\n\t\tInvalid Input!\n";
+					system("pause");
+					system("cls");
+					display();	
+					break;				
 			}
 		}
 		void file_language()
@@ -542,6 +675,12 @@ class library
 			case 5:
 				bio.dis_books();
 				bio.find_book(book_search);
+				break;	
+			default:
+				cout<<"\n\t\tInvalid!\n";
+				system("pause");
+				system("cls");
+				search_book();
 				break;												
 		}
 	}
